@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 48px 20px;
+  background: #f3f5f2;
+  color: #468e67;
+  font: 16px/1.7 Arial, sans-serif;
+}
+
+.carte {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px;
+  background: white;
+  border: 1px solid #e3e8e2;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px #26332c12;
+}
+
+.surtitre {
+  color: #000000;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(36px, 7vw, 58px);
+  letter-spacing: -2px;
+}
+
+h2 {
+  margin-top: 32px;
+  color: #000000;
+  font-size: 28px;
+}
+
+h3 {
+  margin-bottom: 8px;
+}
+
+.introduction,
+.note {
+  color: #000000;
+}
+
+.bouton {
+  display: inline-block;
+  margin: 14px 0;
+  padding: 11px 18px;
+  border-radius: 6px;
+  background: #468e67;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.bouton:hover {
+  background: #304f3c;
+}
+
+.lien {
+  color: #426b52;
+}
+
+li {
+  padding-left: 4px;
+}
+
+@media (max-width: 520px) {
+  .carte {
+    padding: 28px 22px;
+  }
+}
+
+/* Apparition de la carte au chargement */
+/* Barre fixée en haut de l'écran */
+body {
+  padding: 110px 20px 48px;
+}
+
+.barre-haut {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  min-height: 60px;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000000;
+  border-bottom: 1px solid #e3e8e2;
+  box-shadow: 0 4px 15px #00ff7710;
+}
+
+.barre-haut nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.barre-haut a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.barre-haut a:hover {
+    text-decoration: underline;
+}
+
+
+/* Bouton de téléchargement dans la barre */
+.bouton {
+  margin: 0;
+  padding: 7px 10px;
+  font-size: 12px;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.bouton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 18px rgb(60, 119, 90);
+}
+
+/* Apparition de la carte au chargement */
+.carte {
+  animation: apparition 700ms ease-out both;
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apparition des sections au défilement */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Adaptation aux petits écrans */
+@media (max-width: 520px) {
+  .barre-haut {
+    padding: 12px 14px;
+  }
+
+  .barre-haut nav {
+    gap: 10px;
+  }
+
+  .barre-haut nav a {
+    font-size: 12px;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+
+/* Respecte les préférences d'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

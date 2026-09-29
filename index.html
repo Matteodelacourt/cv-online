@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV de Mattéo Delacourt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="barre-haut">
+  <strong>Mattéo Delacourt 1ère année de Bts SIO</strong>
+  <nav>
+    <a href="#competences">Compétences</a>
+    <a href="#projets">Projets</a>
+    <a class="lien" href="contact.html" target="_blank" rel="noopener">Contactez-moi</a>
+    <a class="bouton" href="cv.pdf" download>Télécharger mon CV</a>
+  </nav>
+</header>
+  <main class="carte">
+    <p class="surtitre">PORTFOLIO</p>
+    <h1>Mattéo Delacourt</h1>
+
+    <h2>Bienvenue sur mon CV en ligne</h2>
+    <p class="introduction">
+      Découvrez mon parcours, mes compétences et mes projets.
+    </p>
+
+    <p class="note">Mon CV sera actualisé avec le temps.</p>
+
+    <section id="Experiences professionnelles" class="reveal">
+      <h3>Expériences professionnelles</h3>
+      <ul>
+        <li>Développeur de site web internet et jeux vidéo stagiaire chez MD Consulting pendant 2 ans (2022-2024)</li>
+        <li>ouvrier conchylicole chez Monbrun SARL pendant 3 mois (2026)</li>
+      </ul>
+    </section>
+
+    <section id="competences" class="reveal">
+      <h3>Mes compétences</h3>
+      <ul>
+        <li>HTML et CSS</li>
+        <li>Python et JavaScript</li>
+      </ul>
+    </section>
+
+    <section id="projets" class="reveal">
+      <h3>Mes projets</h3>
+      <ul>
+        <li>Site web personnel</li>
+        <li>Application mobile</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="reveal">
+      <h3>Mes coordonnées</h3>
+      <ul>
+        <li>Email: delacourtmatteopro@gmail.com</li>
+        <li>Téléphone: 06 61 69 53 55</li>
+        <li><a class="lien" href="https://fr.linkedin.com/in/mattéo-delacourt-4115b0439?trk=people-guest_people_search-card" target="_blank" rel="noopener">
+      Mon Profil LinkedIn </li>
+      </ul>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <a class="lien" href="https://fr.linkedin.com/in/mattéo-delacourt-4115b0439?trk=people-guest_people_search-card" target="_blank" rel="noopener">
+      Mon Profil LinkedIn ↗
+    </a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    
+
+
+ <a class="lien" href="https://fr.linkedin.com/in/mattéo-delacourt-4115b0439?trk=people-guest_people_search-card" target="_blank" rel="noopener">
+      Mon Profil LinkedIn ↗
+ <script>
+  const observateur = new IntersectionObserver((sections) => {
+    sections.forEach((section) => {
+      if (section.isIntersecting) {
+        section.target.classList.add("visible");
+        observateur.unobserve(section.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll(".reveal").forEach((section) => {
+    observateur.observe(section);
+  });
+</script>
+
+  </main>
+
+<script>
+  document.querySelectorAll('.barre-haut a[href^="#"]').forEach((lien) => {
+    lien.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const section = document.querySelector(lien.getAttribute("href"));
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
